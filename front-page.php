@@ -34,6 +34,45 @@ if($hero_bg):
             
             <a href="<?php echo home_url('/pendaftaran'); ?>" class="btn btn-outline-light btn-lg px-4">Ikuti Kegiatan</a>
         </div>
+        <div class="mt-5 pt-2">
+            <p class="text-white small fw-bold text-uppercase ls-2 opacity-75 mb-3" style="font-size: 0.75rem; letter-spacing: 2px;">
+                — Ikuti Update Kami —
+            </p>
+            
+            <div class="d-flex justify-content-center gap-3">
+                <?php 
+                
+                $fb = get_field('sosmed_fb');
+                $ig = get_field('sosmed_ig');
+                $yt = get_field('sosmed_yt');
+                $tt = get_field('sosmed_tiktok');
+                ?>
+
+                <?php if($fb): ?>
+                <a href="<?php echo $fb; ?>" target="_blank" class="social-btn hero-social-btn" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <?php endif; ?>
+
+                <?php if($ig): ?>
+                <a href="<?php echo $ig; ?>" target="_blank" class="social-btn hero-social-btn" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <?php endif; ?>
+
+                <?php if($yt): ?>
+                <a href="<?php echo $yt; ?>" target="_blank" class="social-btn hero-social-btn" aria-label="YouTube">
+                    <i class="bi bi-youtube"></i>
+                </a>
+                <?php endif; ?>
+                
+                <?php if($tt): ?>
+                <a href="<?php echo $tt; ?>" target="_blank" class="social-btn hero-social-btn" aria-label="TikTok">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+                <?php endif; ?>
+            </div>
+        </div>
     </div>
 </section>
 
